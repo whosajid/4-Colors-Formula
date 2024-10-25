@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+:root {
+    --ff: "Montserrat", sans-serif;
+    --ff2: "Fira Code", monospace;
+    --h1: 800 2rem/1.2em var(--ff);
+    --p: 400 1rem/1.5em var(--ff);
+    --p-code: 300 .7rem/2em var(--ff2);
+    --hue: 0;
+    --tertiary-hue: calc(var(--hue) + 300);
+    --accent-hue: calc(var(--hue) + 60);
+    --primary-color: hsl(var(--hue), 50%, 90%);
+    --pre-primary-color: hsl(var(--hue), 50%, 95%);
+    --secondary-color: hsl(var(--hue), 50%, 10%);
+    --tertiary-color: hsl(var(--tertiary-hue), 80%, 20%);
+    --accent-color: hsl(var(--accent-hue), 80%, 20%);
+}
+
+.dark {
+    --primary-color: hsl(var(--hue), 50%, 10%);
+    --pre-primary-color: hsl(var(--hue), 50%, 15%);
+    --secondary-color: hsl(var(--hue), 50%, 90%);
+    --tertiary-color: hsl(var(--tertiary-hue), 80%, 80%);
+    --accent-color: hsl(var(--accent-hue), 80%, 80%);
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--ff);
+    font: var(--p);
+}
+
+header{
+    width: 90%;
+    max-width: 1080px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#dark {
+    width: 12px;
+    fill: var(--secondary-color);
+    cursor: pointer;
+    background: var(--pre-primary-color);
+    padding: 8px 11px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px hsla(var(--hue), 50%, 10%, .3), 0 4px 4px hsla(var(--hue), 50%, 10%, .15);
+}
+section{
+width: 90%;
+max-width: 1080px;
+margin: 40px auto;
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.c1{flex: 1;}
+
+a{
+    font: 600 1rem/1em var(--ff);
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    color: var(--primary-color);
+    
+background: var(--accent-color);
+border-radius: 4px;
+margin: 8px 8px 8px 0px;
+padding: 12px 24px;
+border: solid 2px var(--accent-color);
+}
+.secondary{
+    border: solid 2px var(--accent-color);
+    color: var(--accent-color);
+    background: var(--primary-color);
+}
+
+
+h1{
+    font: var(--h1);
+    margin: 0px;
+}
+span{
+    color: var(--accent-color);
+}
+.controls{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70%;
+    height: 4px;
+    background: var(--tertiary-color);
+    border-radius: 5px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 24px;
+    background: var(--tertiary-color);
+    border-radius: 4px;
+}
+input[type="number"] {
+    -webkit-appearance: none;
+    appearance: none;
+    color: var(--secondary-color);
+    font: var(--p);
+    padding: 8px;
+    width: 40px;
+    height: 20px;
+    border: solid 1px var(--tertiary-color);
+    border-radius: 4px;
+    background: transparent;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.c2{
+    position: relative;
+    flex: 1;
+    font: var(--p-code);
+    background: var(--pre-primary-color);
+    color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px hsla(var(--hue), 50%, 10%, .3), 0 4px 4px hsla(var(--hue), 50%, 10%, .15);
+}
+.copy-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    width: 60px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 800px) {
+    section {
+        flex-direction: column;
+    }
+    .c2{
+        width: 90%;
+        padding: 20px;
+    }
+}

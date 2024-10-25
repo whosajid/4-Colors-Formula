@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 4 color formula</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../">Sajid</a>
+        <svg onclick="dark()" id="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+                d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+        </svg>
+    </header>
+    <section>
+        <div class="c1">
+            <h1>You need <span>4</span> colors</h1>
+            <p>2 for text and background(primary & secondary colors). 1 accent color to highlight important elements(number 4 & buttons). And an optional tertiary color to add a bit of personality(the hue slider).</p>
+            <a class="btn" href="https://youtu.be/AmY3db_Qs94" target="_blank">How it works?</a>
+            <a class="btn secondary" href="https://codepen.io/whosajid/pen/GRbXaoB" target="_blank">CodePen</a>
+            
+        <div class="controls">
+            <p>Hue</p>
+            <input type="range" id="hue-slider" min="0" max="360" value="0">
+            <input type="number" id="hue-value">
+        </div>
+        </div>
+        <div class="c2">
+            <pre id="code">:root {
+        --color-primary: hsl(0, 50%, 90%);
+        --color-secondary: hsl(0, 50%, 10%);
+        --color-tertiary: hsl(60, 80%, 20%);
+        --color-accent: hsl(300, 80%, 20%);
+    }
+.dark {
+        --color-primary: hsl(0, 50%, 10%);
+        --color-secondary: hsl(0, 50%, 90%);
+        --color-tertiary: hsl(60, 80%, 80%);
+        --color-accent: hsl(300, 80%, 80%);
+    }</pre><button class="copy-btn">Copy</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
